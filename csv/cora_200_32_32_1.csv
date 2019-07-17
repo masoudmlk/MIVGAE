@@ -1,0 +1,23 @@
+,run,ROC,AP
+0,0.0,0.9203720173262424,0.933803216318154
+1,1.0,0.9038271120408743,0.9241904474205259
+2,2.0,0.9148594493193005,0.9306976893241042
+3,3.0,0.9153023270886368,0.9239222109817976
+4,4.0,0.9238790331582227,0.9369144934246105
+5,5.0,0.9160224535428422,0.9299907813176032
+6,6.0,0.9113344303259653,0.9293637122604703
+7,7.0,0.922867255490064,0.9379531719986551
+8,8.0,0.9180856158341405,0.9305955581124487
+9,9.0,0.9087707801489944,0.927848253819679
+10,mean,0.9155320474275284,0.9305279534978048
+11,std,0.005954068886844474,0.0044643824728761595
+parameter
+arser = argparse.ArgumentParser()
+parser.add_argument('--model', type=str, default='gcn_vae', help="models used")
+parser.add_argument('--seed', type=int, default=42, help='Random seed.')
+parser.add_argument('--epochs', type=int, default=200, help='Number of epochs to train.')
+parser.add_argument('--hidden1', type=int, default=32, help='Number of units in hidden layer 1.')
+parser.add_argument('--hidden2', type=int, default=32, help='Number of units in hidden layer 2.')
+parser.add_argument('--lr', type=float, default=0.01, help='Initial learning rate.')
+parser.add_argument('--dropout', type=float, default=0., help='Dropout rate (1 - keep probability).')
+parser.add_argument('--dataset-str', type=str, default='citeseer', help='type of dataset.')
